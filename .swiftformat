@@ -13,7 +13,7 @@
 --enable elseOnSameLine
 --disable emptyBraces
 --enable fileHeader
---header "//\n//  Copyright © 2019 NTT DOCOMO, INC. All rights reserved.\n//"
+--header "//\n//  Copyright © 2019 Doraemon, INC. All rights reserved.\n//"
 --enable hoistPatternLet
 --enable indent
 --enable isEmpty
