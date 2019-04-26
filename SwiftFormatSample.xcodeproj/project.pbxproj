@@ -26,6 +26,7 @@
 		B54806282272E35A00F5546B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B548062B2272E35A00F5546B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B548062D2272E35A00F5546B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B57634A82273083100AEC28F /* Nobita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nobita.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		B54806152272E35900F5546B = {
 			isa = PBXGroup;
 			children = (
+				B57634A7227307FE00AEC28F /* SwiftFormatSampleTests */,
 				B54806202272E35900F5546B /* SwiftFormatSample */,
 				B548061F2272E35900F5546B /* Products */,
 				C58EB79A4B0B8ACDFB1E8E9E /* Pods */,
@@ -79,13 +81,20 @@
 			path = SwiftFormatSample;
 			sourceTree = "<group>";
 		};
+		B57634A7227307FE00AEC28F /* SwiftFormatSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B57634A82273083100AEC28F /* Nobita.swift */,
+			);
+			path = SwiftFormatSampleTests;
+			sourceTree = "<group>";
+		};
 		C58EB79A4B0B8ACDFB1E8E9E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				56731CD08FEA8218BE7D543A /* Pods-SwiftFormatSample.debug.xcconfig */,
 				79B2035921DC6140BDBFD56D /* Pods-SwiftFormatSample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +106,7 @@
 			buildConfigurationList = B54806302272E35A00F5546B /* Build configuration list for PBXNativeTarget "SwiftFormatSample" */;
 			buildPhases = (
 				54CA57807FBFAB5F5A572FA6 /* [CP] Check Pods Manifest.lock */,
+				B57634A52272E69A00AEC28F /* swiftformat */,
 				B548061A2272E35900F5546B /* Sources */,
 				B548061B2272E35900F5546B /* Frameworks */,
 				B548061C2272E35900F5546B /* Resources */,
@@ -178,6 +188,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B57634A52272E69A00AEC28F /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" ./\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
