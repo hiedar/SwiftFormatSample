@@ -1,0 +1,6 @@
+framework module Pods_SwiftFormatSample {
+  umbrella header "Pods-SwiftFormatSample-umbrella.h"
+
+  export *
+  module * { export * }
+}
